@@ -1,0 +1,22 @@
+{
+  "name": "book-search",
+  "version": "1.0.0",
+  "description": "book search engine",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server --ignore client",
+    "develop": "concurrently \"cd server && npm run start\" \"cd client && npm run dev\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbogart91/book-search.git"
+  },
+  "author": "Cody Bogart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbogart91/book-search/issues"
+  },
+  "homepage": "https://github.com/cbogart91/book-search#readme"
+}

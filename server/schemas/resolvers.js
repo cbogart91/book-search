@@ -38,10 +38,10 @@ const resolvers = {
 
             return { token, user };
         },
-        removeBook: async ({ user, params }, res) => {
+        userRemoveBook: async ({ user, params }, res) => {
             const book = await User.findOneAndDelete(
                 { _id: user._id },
-                { $pull: { saveBooks: { bookId: params.bookId }}  },
+                { $pull: { savedBooks: { bookId: params.bookId }}  },
                 { new: true }
             );
             if (!book){ 

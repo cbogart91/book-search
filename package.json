@@ -4,10 +4,11 @@
   "description": "book search engine",
   "main": "index.js",
   "scripts": {
-    "start": "node server --ignore client",
-    "develop": "concurrently \"cd server && npm run start\" \"cd client && npm run dev\"",
+    "start": "node server/server.js --ignore client",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "render-build": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/cbogart91/book-search/issues"
   },
-  "homepage": "https://github.com/cbogart91/book-search#readme"
+  "homepage": "https://github.com/cbogart91/book-search#readme",
+  "dependencies": {
+    "concurrently": "^9.0.1"
+  }
 }
